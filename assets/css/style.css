@@ -1,0 +1,274 @@
+/* ============================================================
+   SPK Vira Jaya Computer — tema tampilan (ink navy + copper accent)
+   Didesain untuk tetap ringan & sederhana di atas Bootstrap 5.
+   ============================================================ */
+:root{
+  --ink:#14213D;
+  --ink-2:#1E2E52;
+  --copper:#C97A3E;
+  --copper-dark:#A85F2B;
+  --paper:#F6F4EF;
+  --text:#262B36;
+  --muted:#6B7280;
+  --border:#E3DFD5;
+  --success:#3F8F5F;
+  --danger:#C0463C;
+  --radius:10px;
+}
+
+body{
+  background:var(--paper);
+  color:var(--text);
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+body, .navbar-brand, .navbar-dark .nav-link, .site-header, .site-tab, .card-header, .table thead th, label, h1, h2, h3, h4, h5, h6, p, td, th, .btn, .form-control, .form-select, .hero-panel, .rank-badge{
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.login-card-title{
+  color:#14213D;
+  font-weight:700;
+}
+
+/* ---------- Navbar ---------- */
+.navbar.bg-dark{
+  background:var(--ink) !important;
+  box-shadow:0 2px 10px rgba(20,33,61,0.15);
+}
+.navbar-brand{
+  font-weight:700;
+  letter-spacing:0.02em;
+}
+.navbar-dark .nav-link{
+  color:#C7CBE0 !important;
+  font-weight:500;
+  padding:8px 14px !important;
+  border-radius:7px;
+  transition:background .15s, color .15s;
+}
+.navbar-dark .nav-link:hover{
+  background:rgba(255,255,255,0.08);
+  color:#fff !important;
+}
+
+/* ---------- Site header (wireframe style: logo + brand + pill tabs) ---------- */
+.site-header{
+  background:var(--ink);
+  color:#fff;
+  padding:18px 0 0;
+  margin-bottom:0;
+}
+.site-header-top{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding-bottom:16px;
+}
+.brand-mark{
+  width:44px; height:44px; border-radius:9px;
+  border:2px solid rgba(255,255,255,0.35);
+  display:flex; align-items:center; justify-content:center;
+  font-family:Arial, Helvetica, sans-serif; font-weight:700; font-size:18px;
+  flex-shrink:0;
+  overflow:hidden;
+}
+.brand-mark img{ width:100%; height:100%; object-fit:cover; }
+.brand-name{
+  font-size:19px; font-weight:700; letter-spacing:0.02em;
+}
+.brand-sub{
+  font-size:12px; color:#9CA3C5; text-transform:uppercase; letter-spacing:0.05em;
+}
+.site-tabs{
+  display:flex; gap:8px; flex-wrap:wrap;
+  border-top:1px solid rgba(255,255,255,0.1);
+  padding:10px 0;
+}
+.site-tab{
+  display:inline-block;
+  padding:8px 16px;
+  border-radius:8px;
+  font-size:13.5px;
+  font-weight:600;
+  color:#fff;
+  background:rgba(255,255,255,0.08);
+  text-decoration:none;
+  transition:background .15s;
+}
+.site-tab:hover{
+  background:rgba(255,255,255,0.16);
+  color:#fff;
+}
+.site-tab.active-tab{
+  background:var(--copper);
+  color:#fff;
+}
+
+/* ---------- Buttons ---------- */
+.btn-primary{
+  background-color:var(--copper);
+  border-color:var(--copper);
+}
+.btn-primary:hover, .btn-primary:focus{
+  background-color:var(--copper-dark);
+  border-color:var(--copper-dark);
+}
+.btn-outline-danger:hover{
+  background-color:#F5D9D5;
+  color:var(--danger);
+  border-color:var(--danger);
+}
+
+/* ---------- Cards ---------- */
+.card{
+  border:1px solid var(--border);
+  border-radius:var(--radius);
+  box-shadow:0 1px 3px rgba(20,33,61,0.05);
+}
+.card-header{
+  background:#FAF8F4;
+  border-bottom:1px solid var(--border);
+  font-weight:600;
+}
+
+/* ---------- Tables ---------- */
+.table{
+  background:#fff;
+  border-radius:var(--radius);
+  overflow:hidden;
+}
+.table thead th{
+  background:#FAF8F4;
+  color:var(--muted);
+  font-size:12px;
+  text-transform:uppercase;
+  letter-spacing:0.04em;
+  font-weight:700;
+  border-bottom:2px solid var(--border);
+}
+.table td, .table th{
+  vertical-align:middle;
+  border-color:var(--border);
+}
+.table-hover tbody tr:hover{
+  background:#FCFBF8;
+}
+
+/* ---------- Badges (kode produk look like spec chips) ---------- */
+.badge-kode{
+  font-family:Arial, Helvetica, sans-serif;
+  background:var(--ink);
+  color:#F0EBDC;
+  padding:3px 9px;
+  border-radius:5px;
+  font-size:12px;
+  letter-spacing:0.02em;
+}
+
+/* ---------- Forms ---------- */
+.form-control:focus, .form-select:focus{
+  border-color:var(--copper);
+  box-shadow:0 0 0 0.2rem rgba(201,122,62,0.18);
+}
+label{
+  font-weight:600;
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* ---------- Section headers ---------- */
+h3, h4{
+  color:var(--ink);
+  font-weight:700;
+}
+
+/* ---------- Homepage hero ---------- */
+.hero-panel{
+  background:linear-gradient(135deg, var(--ink), var(--ink-2));
+  color:#fff;
+  border-radius:var(--radius);
+  padding:28px 30px;
+  margin-bottom:24px;
+}
+.hero-panel h2{ color:#fff; }
+.hero-panel p{ color:#AEB4CC; margin:0; }
+
+/* ---------- Ranking podium ---------- */
+.rank-1 td:first-child{ position:relative; }
+.rank-badge{
+  display:inline-flex; align-items:center; justify-content:center;
+  width:26px; height:26px; border-radius:50%;
+  background:var(--paper); color:var(--muted); font-weight:700; font-size:12px;
+}
+.rank-badge.gold{ background:var(--copper); color:#fff; }
+
+/* ---------- Print (laporan) ---------- */
+@page {
+  size: A4;
+  margin: 10mm;
+}
+
+@media print{
+  html, body {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    background: #fff;
+  }
+
+  .no-print{ display:none !important; }
+  body *{ visibility:hidden; }
+  #print-area, #print-area *{ visibility:visible; }
+  #print-area{ position:static; width:100%; }
+  .print-sheet{ border:none; box-shadow:none; }
+  .site-header, .sheet-toolbar{ display:none !important; }
+}
+
+/* ---------- Product cards ---------- */
+.product-card{
+  transition:transform .15s, box-shadow .15s;
+}
+.product-card:hover{
+  transform:translateY(-3px);
+  box-shadow:0 8px 20px rgba(20,33,61,0.1);
+}
+.card-photo-lg{
+  height:110px;
+  background:var(--paper);
+  display:flex; align-items:center; justify-content:center;
+  color:var(--muted); font-size:26px; font-weight:700;
+  border-bottom:1px solid var(--border);
+}
+.filter-panel{
+  background:#fff; border:1px solid var(--border); border-radius:var(--radius);
+  padding:16px 18px; margin-bottom:20px;
+}
+.filter-panel .form-check{ margin-right:18px; display:inline-block; }
+
+/* ---------- Thumbnail (tabel admin & kartu produk) ---------- */
+.thumb-list{ width:42px; height:42px; object-fit:cover; border-radius:7px; border:1px solid var(--border); }
+.thumb-list-placeholder{ width:42px; height:42px; border-radius:7px; border:1.5px dashed var(--border); display:flex; align-items:center; justify-content:center; color:var(--muted); background:var(--paper); }
+.card-photo-img{ height:110px; object-fit:cover; width:100%; border-bottom:1px solid var(--border); }
+
+/* ---------- Letterhead / print sheet (laporan) ---------- */
+.print-sheet{ background:#fff; border:1px solid var(--border); border-radius:var(--radius); overflow:hidden; }
+.sheet-toolbar{ padding:14px 20px; border-bottom:1px solid var(--border); display:flex; justify-content:space-between; align-items:center; }
+.letterhead{ display:flex; gap:16px; align-items:center; padding:24px 30px 18px; border-bottom:2px solid var(--ink); }
+.letterhead .logo-box{ width:64px; height:64px; border:1.5px solid var(--border); border-radius:8px; display:flex; align-items:center; justify-content:center; font-size:10px; color:var(--muted); flex-shrink:0; }
+.letterhead .co-name{ font-weight:700; font-size:19px; text-align:center; flex:1; color:var(--ink); }
+.letterhead .co-addr{ font-size:11px; color:var(--muted); text-align:center; margin-top:4px; line-height:1.5; }
+.sheet-title{ text-align:center; font-weight:700; font-size:13.5px; letter-spacing:0.06em; text-transform:uppercase; padding:16px 0 6px; }
+.sheet-body{ padding:0 30px 30px; }
+.sign-block{ display:flex; justify-content:flex-end; margin-top:40px; }
+.sign-block .sign{ text-align:center; font-size:12px; }
+.sign-block .sign .date{ margin-bottom:46px; }
+.sign-block .sign .name{ font-weight:600; text-decoration:underline; margin-top:4px; }
+@media print{
+    body *{ visibility:hidden; }
+    #print-area, #print-area *{ visibility:visible; }
+    #print-area{ position:absolute; top:0; left:0; width:100%; }
+    .sheet-toolbar, .site-header{ display:none; }
+    .print-sheet{ border:none; }
+}
